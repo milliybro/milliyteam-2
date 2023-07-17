@@ -1,0 +1,113 @@
+@use "../global";
+@use "../components/sermon-card";
+@use "../layout/header";
+@use "../layout/footer";
+@use "../utils/mixins" as mxn;
+@use "../utils/variables" as var;
+
+#contact {
+  padding-top: 80px;
+  background: #f5f2f0;
+  background-image: url(../../image/contact/6liebVeAfrY.png);
+}
+
+.contact-img {
+  padding: 160px 110px 95px 0;
+  gap: 16px;
+  p {
+    color: var(--primary, #ffd2a4);
+    font-family: Roboto Condensed;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+  h1 {
+    color: var(--white, #fff);
+    font-family: Roboto Condensed;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 64px;
+    letter-spacing: -0.48px;
+    text-transform: uppercase;
+  }
+}
+
+#form {
+  background: #f5f2f0;
+}
+
+.font__father {
+  display: flex;
+ gap: 128px;
+ @media (max-width: 1220px) {
+  flex-direction: column;
+  gap: 20px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+  .form__input {
+    margin-top: 128px;
+    h1 {
+      color: var(--dark, #1e1b1b);
+      font-family: Roboto Condensed;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: -0.24px;
+      text-transform: uppercase;
+    }
+    input {
+      display: flex;
+      padding: 20px 350px 20px 20px;
+      margin-top: 15px;
+      border: 1px solid white;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 100px;
+      border-radius: 4px;
+      background: var(--white, #fff);
+    }
+    button {
+      @include mxn.primary-btn;
+      margin-top: 30px;
+      margin-bottom: 128px;
+    }
+    .inp {
+      padding: 24px 350px 72px 20px;
+    }
+  }
+}
+
+.font__adres {
+  margin-top: 128px;
+  gap: 32px;
+  p {
+    padding-bottom: 8px;
+    color: var(--dark, #1e1b1b);
+    font-family: Roboto Condensed;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    opacity: 0.699999988079071;
+  }
+  h2 {
+    padding-bottom: 32px;
+    color: var(--black, #161722);
+    font-family: Roboto Condensed;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.24px;
+    text-transform: uppercase;
+  }
+  .icon {
+
+  }
+}

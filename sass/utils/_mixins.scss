@@ -1,0 +1,54 @@
+@use "../utils/variables" as var;
+
+@mixin btn($padding: 24px 64px, $bg-color: var.$c2, $color: #1c1d28) {
+  padding: $padding;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  background-color: $bg-color;
+  color: $color;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+@mixin primary-btn {
+  @include btn;
+
+  &:hover {
+    background: #f2c79b;
+  }
+}
+
+@mixin secondary-btn {
+  @include btn(24px 64px, var.$c1, var.$c2);
+  backdrop-filter: blur(40px);
+
+  &:hover {
+    color: var.$c5;
+  }
+}
+
+@mixin nav-btn {
+  @include btn(20px 48px);
+
+  &:hover {
+    background: #f2c79b;
+  }
+}
+
+@mixin title($size, $weight, $height) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+  text-transform: uppercase;
+}
+
+@mixin title-h2 {
+  @include title(var.$h2, 700, 64px);
+  letter-spacing: -0.48px;
+}
+
+@mixin title-h6 {
+  @include title(var.$h6, 400, normal);
+}

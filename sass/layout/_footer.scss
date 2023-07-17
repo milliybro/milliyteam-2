@@ -1,0 +1,135 @@
+@use "../utils/mixins" as mxn;
+@use "../utils/variables" as var;
+
+footer {
+  background: var.$c1;
+  padding-top: 64px;
+  padding-bottom: 64px;
+  .footer {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    &__left {
+      display: flex;
+      justify-content: space-between;
+      padding-right: 115px;
+      @media (max-width: 600px) {
+         padding-right: 0;
+      }
+      &__hero {
+        h3 {
+          color: var.$c5;
+          text-align: center;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          text-transform: uppercase;
+          padding-top: 27.65px;
+          padding-bottom: 32px;
+        }
+        p {
+          color: var.$c5;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          text-transform: uppercase;
+          padding-bottom: 16px;
+        }
+      }
+      &__link {
+        display: flex;
+        justify-content: space-between;
+        gap: 72px;
+        ul {
+          h3 {
+            color: var.$c5;
+            text-align: right;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            padding-bottom: 20px;
+          }
+          li {
+            padding-bottom: 24px;
+            a {
+              color: var.$c5;
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+              text-transform: uppercase;
+            }
+          }
+        }
+        &__social {
+          h3 {
+            color: var.$c5;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            padding-bottom: 20px;
+          }
+          img {
+            padding-right: 20px;
+            
+          }
+        }
+      }
+      @media (max-width: 600px) {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+    &__right {
+      h2 {
+        color: var.$c5;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 44px;
+        letter-spacing: -0.32px;
+        text-transform: uppercase;
+        padding-bottom: 32px;
+      }
+      &__mail {
+        position: relative;
+        input {
+          border-radius: 12px;
+          border: 1px solid rgba(255, 255, 255, 0.15);
+          background: transparent;
+          color: var.$c5;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 24px;
+          padding: 20px;
+          width: 100%;
+        }
+        > button {
+          position: absolute;
+          right: 0px;
+          @include mxn.primary-btn;
+        }
+        @media (max-width:450px){
+         display: flex;
+         flex-direction: column;
+         button{
+            position: relative;
+            width: 100%;
+            margin: 0 auto;
+         }
+        }
+      }
+      @media (max-width:350px){
+       display: none;
+      }
+    }
+    @media (max-width: 1050px) {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 20px;
+    }
+  }
+}

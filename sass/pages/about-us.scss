@@ -1,0 +1,248 @@
+@use "../base/_typography.scss";
+@use "../global";
+@use "../layout/container";
+@use "../layout/header";
+@use "../layout/footer";
+@use "../components/section-header";
+
+main {
+   padding-top: 80px;
+
+   .home {
+      background-image: url(../../image/about-us/bck_img.png);
+      width: 100%;
+      height: 500px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      .titel {
+         padding-top: 160px;
+
+         p {
+            padding-bottom: 16px;
+            color: #161722;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            text-transform: uppercase;
+         }
+
+         h1 {
+            color: #161722;
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 64px;
+            letter-spacing: -0.48px;
+            text-transform: uppercase;
+         }
+      }
+   }
+}
+
+@media (max-width:401px) {
+   main {
+      padding-top: 0;
+   }
+}
+
+.about {
+   padding-top: 150px;
+
+   .about__titel {
+      padding-top: 32px;
+      padding-bottom: 48px;
+      color: alpha($color: #000000);
+      text-align: center;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+   }
+
+   .about__card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+
+      .card__one {
+         img {
+            width: 100%;
+         }
+      }
+   }
+}
+
+@media (max-width:1080px) {
+   .about__card {
+      flex-direction: column;
+   }
+}
+
+.about__text {
+   padding-top: 64px;
+   padding-bottom: 128px;
+   display: flex;
+   justify-content: center;
+   gap: 24px;
+
+   .about__left,
+   .about__right {
+      width: 372px;
+
+      b {
+         color: #161722;
+         font-size: 16px;
+         font-style: normal;
+         font-weight: 400;
+         line-height: normal;
+         text-transform: uppercase;
+      }
+
+      h2 {
+         padding: 16px 0 16px;
+         color: #161722;
+         /* Heading h4 */
+         font-size: 32px;
+         font-style: normal;
+         font-weight: 700;
+         line-height: 44px;
+         /* 137.5% */
+         letter-spacing: -0.32px;
+         text-transform: uppercase;
+      }
+
+      p {
+         color: #161722;
+         /* Paragraph */
+         font-size: 16px;
+         font-style: normal;
+         font-weight: 400;
+         line-height: 24px;
+      }
+   }
+}
+
+@media (max-width:600px) {
+   .about__text {
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .about__left,
+   .about__right {
+      width: 300px;
+   }
+}
+
+.benefits__container {
+   padding-bottom: 128px;
+}
+
+.benefits__card {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 48px;
+
+   .benefits__left {
+      h3 {
+         padding-bottom: 16px;
+         color: #161722;
+         font-size: 32px;
+         font-style: normal;
+         font-weight: 700;
+         line-height: 44px;
+         letter-spacing: -0.32px;
+         text-transform: uppercase;
+      }
+
+      p {
+         color: #161722;
+         font-size: 16px;
+         font-style: normal;
+         font-weight: 400;
+         line-height: 24px;
+         opacity: 0.7799999713897705;
+      }
+
+   }
+}
+
+.benefits__card__two {
+   padding-top: 96px;
+   flex-direction: row-reverse;
+}
+
+.padding__top {
+   padding-top: 96px;
+}
+
+@media (max-width:1080px) {
+   .benefits__card {
+      flex-direction: column-reverse;
+      align-items: center;
+
+      .benefits__right {
+         img {
+            width: 100%;
+         }
+      }
+   }
+}
+
+.team {
+   .team__card {
+      padding-top: 64px;
+      padding-bottom: 128px;
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+
+      .team__box {
+         padding: 48px 30px;
+         width: 302px;
+         background: #F5F2F0;
+
+         img {
+            padding-bottom: 26px;
+            margin: 0 auto;
+            display: flex;justify-content: center;
+         }
+
+         h3 {
+            text-align: center;
+            color: #161722;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: -0.24px;
+            text-transform: uppercase;
+         }
+
+         p {
+            margin-top: 8px;
+            text-align: center;
+            color: #161722;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            opacity: 0.699999988079071;
+            /* 150% */
+         }
+      }
+   }
+}
+
+.team__connect {
+   padding-top: 16px;
+   display: flex;
+   justify-content: center;
+   gap: 20px;
+}

@@ -1,0 +1,9 @@
+@use "../utils/mixins" as mxn;
+
+.upcoming-sermon {
+  &__left {
+    button {
+      @include mxn.secondary-btn;
+    }
+  }
+}

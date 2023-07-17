@@ -1,0 +1,19 @@
+// @use "../global";
+
+
+@font-face {
+   font-family: 'Roboto', sans-serif;
+   src: url(../../fonts/RobotoCondensed-Bold.ttf);
+}
+@font-face {
+   font-family: 'Roboto', sans-serif;
+   src: url(../../fonts/RobotoCondensed-Light.ttf);
+}
+@font-face {
+   font-family: 'Roboto', sans-serif;
+   src: url(../../fonts/RobotoCondensed-Regular.ttf);
+}
+
+html,body *{
+   font-family: 'Roboto', sans-serif;
+}

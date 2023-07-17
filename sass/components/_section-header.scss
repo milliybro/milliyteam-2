@@ -1,0 +1,12 @@
+@use "../utils/mixins" as mxn;
+
+.section-header {
+  text-align: center;
+  h6 {
+    @include mxn.title-h6;
+    margin-bottom: 20px;
+  }
+  h2 {
+    @include mxn.title-h2;
+  }
+}
